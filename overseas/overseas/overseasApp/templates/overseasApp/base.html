@@ -57,9 +57,9 @@
                             <a class="nav-link" href="{% url 'admin_login' %}">Admin</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Study Abroad</a>
+                            <a class="nav-link" href="#div9_study_abroad">Study Abroad</a>
                         </li>
-                        <li class="nav-item">
+                        {% comment %} <li class="nav-item">
                             <a class="nav-link" href="#">Study Visa</a>
                         </li>
                         <li class="nav-item">
@@ -67,9 +67,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Documents</a>
-                        </li>
+                        </li> {% endcomment %}
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About us</a>
+                            <a class="nav-link" href="{% url 'about_us' %}">About us</a>
                         </li>
 
                     </ul>

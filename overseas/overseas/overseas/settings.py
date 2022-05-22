@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     # custom apps
     'overseasApp',
     #thirdparty apps
-    'fontawesomefree',
+    #'fontawesomefree',
     'crispy_forms'
     
 ]

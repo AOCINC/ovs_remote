@@ -17,7 +17,7 @@ from .util import link_callback
 
 
 def index(request):
-    template = 'OverseasApp/home.html'
+    template = 'overseasApp/home.html'
     
     Data = 'Something'
     context = {
@@ -26,7 +26,7 @@ def index(request):
     return render(request,template,context)
 
 def admin_console(request):
-    template = 'OverseasApp/adminconsole.html'
+    template = 'overseasApp/adminconsole.html'
     
     Data = 'Something'
     context = {
@@ -35,7 +35,7 @@ def admin_console(request):
     return render(request,template,context)
 
 def student_info_view(request):
-    template = 'OverseasApp/student_info.html'
+    template = 'overseasApp/student_info.html'
     if request.method == 'POST':
         form = student_info_form(request.POST)
         if form.is_valid():
@@ -78,7 +78,7 @@ def student_info_view(request):
             form.save()
             msg = 'student info stored successfully!'
             messages.success(request,msg)
-            return redirect('home')
+            return redirect('students_data')
     else:
         form = student_info_form()
     
@@ -92,7 +92,7 @@ def student_info_view(request):
 def student_info_data(request):
     ''' this method will render the student information stored by admin'''
     template = 'overseasApp/student_data.html'
-    students = student_info.objects.all()
+    students = student_info.objects.all().order_by('-id') 
     datacount = students.count() # this is count of all enquiries landed
     context  = {
         'students':students,
@@ -285,7 +285,7 @@ def enquiry_view(request):
 
 def enquiry_data(request):
     template = 'overseasApp/enquiry_data.html'
-    edata    = enquir_form.objects.all()
+    edata    = enquir_form.objects.all().order_by('-id')
     datacount = edata.count() # this is count of all enquiries landed
     context  = {
         'edata':edata,

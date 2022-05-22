@@ -1,0 +1,55 @@
+<!DOCTYPE html> {% extends 'overseasApp/base.html' %} {% load crispy_forms_tags %} {% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry</title>
+</head>
+
+<body>
+    {% block content %}
+    <div class="container table-responsive" id="enquired-data">
+        {% if edata %}
+        <legend>
+            <h2 class="badge rounded-pill bg-info text-dark"> Total Enquires :{{ datacount }}</h2>
+            <a href="{% url 'admin_control' %}">
+                <h2 class="badge rounded-pill bg-info text-dark"> Go To Admin Console</h2>
+            </a>
+        </legend>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in edata %}
+                <tr>
+                    <th scope="row"> <img id="man-img" src="{% static 'images/man.png' %}" alt=""></th>
+                    <td>{{ data.Name}}</td>
+                    <td>{{ data.Email}}</td>
+                    <td>{{ data.Phone }}</td>
+                    <td>{{ data.Location }}</td>
+                </tr>
+                {% endfor %}
+                <br>{% else %}
+                <h1>No data Found</h1> {% endif%}
+
+            </tbody>
+        </table>
+    </div>
+    {% endblock %}
+
+
+</body>
+
+
+</html>

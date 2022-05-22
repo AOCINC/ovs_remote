@@ -1,0 +1,71 @@
+{% block content%}
+
+<head>
+    <style>
+        #product_mail {
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+        
+        #product_mail h3 {
+            background: rgb(50, 50, 56);
+            color: white;
+            padding: 3%;
+            text-align: center;
+        }
+        
+        #product_mail_body {
+            background: rgb(199, 242, 255);
+            color: black;
+            margin-top: -30px;
+            padding: 5%;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        #product_mail_body p {
+            background: rgb(255, 255, 255);
+            padding: 25px;
+            box-shadow: 0 8px 6px -6px black;
+            text-align: center;
+        }
+        
+        .mail_footer {
+            background: black;
+            color: white;
+            padding: 2%;
+            text-align: center;
+        }
+    </style>
+</head>
+<br>
+
+<!--  -->
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <!-- leaving empty  -->
+        </div>
+        <div class="col-6">
+            <div class="container" id="product_mail">
+                <h3>New Request From Candidate - {{ name }} </h3>
+                <div id="product_mail_body">
+                    <p>Client Name : {{ name }}</p>
+                    <p>Client Email : {{ email }}</p>
+                    <p>Phone : {{ phone }}</p>
+                    <p>Candidate Location : {{ location }}</p>
+
+                </div>
+                <!--  -->
+                <div class="col-2 mail_footer">
+                    <p>SUPERLATIVE OVERSEASE CONSULTANTS</p>
+                </div>
+                <!--  -->
+            </div>
+        </div>
+        <div class="col">
+            <!-- leaging empty -->
+        </div>
+    </div>
+</div>
+<br> {% endblock %}

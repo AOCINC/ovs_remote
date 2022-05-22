@@ -1,0 +1,104 @@
+<!DOCTYPE html> {% extends 'overseasApp/base.html' %} {% load crispy_forms_tags %} {% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry</title>
+</head>
+
+<body>
+    {% block content %}
+    <!-- invoice -->
+    <br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="{% static 'images/brand_1.png' %}" width="120px" alt=" ">
+                <br>
+                <!-- <h4>Invoice </h4> -->
+            </div>
+            <div class="col-sm-4">
+                <h5>
+                    <br> Invoice <br> ORDER NUM #{{ detail_invoice.Order_No }}
+                    <br> Date :{{ detail_invoice.Date}}
+                </h5>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <!-- second row invoice -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h4>Candidate Info </h4>
+                <p>Name: {{ detail_invoice.Student_name }}
+                    <br> Address : {{ detail_invoice.Address}}
+                    <br> Email :{{ detail_invoice.Email}}
+                    <br> Phone : {{ detail_invoice.Phone}}
+                </p>
+
+            </div>
+            <div class="col-sm-4">
+                <h5>
+                    SUPERLATIVE OVERSEAS CONSULTANTS
+                </h5>
+                <p>
+                    UGF-58,A1-51,
+                    <br>Parsvnath Plaza-1,
+                    <br>Opposite TMID,
+                    <br>Moradabad, U.P-244001,
+                    <br>Email: info@superlativeoverseas.com
+                    <br>Ph: 90684 31074
+                </p>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <!-- second row invoice  end -->
+    <!-- third row -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h4>Description </h4>
+                <P>{{ detail_invoice.Description }}</P>
+            </div>
+            <div class="col-sm-4">
+                <h5>Payment Details</h5>
+                <p>
+                    Total Payment &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - ₹ {{ detail_invoice.Total_Payment }}/-
+                    <hr>Advance Payment - ₹ {{ detail_invoice.Advance_Payment }}/-
+                    <hr>Due Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - ₹ {{ detail_invoice.Due_Payment }}/-
+                </p>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <!-- third row end -->
+    <!-- fourth row -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <br>
+                <!-- <h4>Invoice </h4> -->
+            </div>
+            <div class="col-sm-4">
+                <h5>
+
+                    <br> Authorizer - Awes khan
+
+                </h5>
+            </div>
+        </div>
+    </div>
+    <!-- fourth row -->
+    <!--invoice  -->
+    {% endblock %}
+
+
+</body>
+
+
+</html>

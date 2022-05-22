@@ -1,0 +1,363 @@
+<!DOCTYPE html> {% extends 'overseasApp/base.html' %} {% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% block content %}
+    <br><br> {% include 'overseasApp/carousal.html' %}
+    <!-- div2 -->
+    <div id='div2'>
+        <h2 class='d-flex justify-content-center'>Our Mission </h2>
+        <p class='d-flex justify-content-center'>
+            Our Expedition is to spread awareness regarding foreign countries and academic opportunities linked with these countries.
+        </p>
+    </div>
+    <!-- div2 end -->
+    <!-- div3 -->
+    <div class="container" id="div3">
+        <div class="row">
+            <div id="div3-para" class="col-sm-6">
+                <p>
+                    Connect with India’s best study abroad experts.
+                </p>
+                <div class="row" id="div3-cap">
+                    <div class="col-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                            <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
+                            <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                        </svg> Profile Evaluation
+                    </div>
+                    <div class="col-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                            <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
+                            <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                        </svg> University Shortlist
+                    </div>
+                    <!-- <div class="col-sm">col-sm</div> -->
+                </div>
+                <div class="d-grid gap-2 col-10 mx-auto">
+                    <button class="btn btn" type="button" id="counsel-btn">
+                        <a href="{% url 'get_enquiry' %}">  Book Free Counselling </a>
+                    </button>
+                    <!-- </a> -->
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <img class="img-fluid" src="{% static 'images/continue_work.jpg' %}" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- div3 end -->
+    <!-- div 4 -->
+    <div class="div-bg">
+        <div class="container" id='div4'>
+            <div class="row">
+                <div class="col-sm-8">
+                    <p id='div4-h2'>
+                        <!-- <b>Everything you need for your study abroad dream</b> -->
+                        <b class="d-flex justify-content-center">
+                            Why Choose Superlative Overseas For Your Study Abroad Experience? 
+                        </b>
+                    </p>
+                </div>
+                <!-- <div class="col-sm-4">col-sm-4</div> -->
+            </div>
+            <!-- tiles -->
+            <div class="row" id="div4-box">
+                <div class="col-sm">
+                    <!-- card -->
+                    <div class="card text-black bg mb-4">
+                        <div class="card-header text-center ">
+                            <img src="{% static 'images/check-mark.png' %}" width="70px" alt="">
+                        </div>
+                        <div class="card-body ">
+                            <legend class="text-center">
+                                Handpicked Programs Across Partner Universities.
+                            </legend>
+                            <br>
+                        </div>
+                    </div>
+                    <!-- card end -->
+                </div>
+                <div class="col-sm ">
+                    <!-- card -->
+                    <div class="card text-black bg mb-4">
+                        <div class="card-header text-center">
+                            <img src="{% static 'images/check-mark.png' %}" width="70px" alt="">
+                        </div>
+                        <div class="card-body ">
+                            <legend class="text-center">
+                                Expert advice for course, country & university Selection.
+                            </legend>
+                        </div>
+                    </div>
+                    <!-- card end -->
+                </div>
+                <div class="col-sm ">
+                    <!-- card -->
+                    <div class="card text-black bg mb-4">
+                        <div class="card-header text-center">
+                            <img src="{% static 'images/check-mark.png' %}" width="70px" alt="">
+                        </div>
+                        <div class="card-body ">
+                            <legend class="text-center">
+                                Guidance for application editing and processing. <br> IELTS/TOEFL Preparation
+                            </legend>
+                        </div>
+                    </div>
+                    <!-- card end -->
+                </div>
+            </div>
+            <hr>
+            <!-- tiles end -->
+            <div class="d-flex justify-content-center">
+                <button class="btn btn" type="button" id="counsel-btn">
+                    <a href="{% url 'get_enquiry' %}">  Book Free Counselling </a>
+                </button>
+            </div>
+            <div class="d-flex justify-content-center">
+                <p><b> Speak to our counsellor</b></p>
+            </div>
+        </div>
+    </div>
+    <!-- div 4 end -->
+    <!-- div5 -->
+    <div class="container" id="div5">
+        <div class="row">
+            <div class="col-sm-6" id="div5-1">
+                <p> <span>We Impart</span> Career Superlative Consultant will provide Individual Career Counseling to each & every student after evaluating their profile</p>
+            </div>
+            <div class="col-sm-6" id="div5-2">
+                <p>
+                    <img width='30px' src="{% static 'images/straight-quotes.png' %}" alt=""> Picking an orderly and integrated approach to career guidance, We keenly study the profile of each and every student based on various parameters. <br>
+                    <img width='30px' src="{% static 'images/straight-quotes.png' %}" alt=""> After going through your profile and taking into consideration your career goals and desire, We arise with well grounded selection of universities to apply to
+                    and chart out a course to be followed which in turn helps you in securing admission into one of the top college of your choice.
+                </p>
+            </div>
+
+        </div>
+        <!-- div5 end -->
+        <!-- div6 -->
+        <div class="container" id="div6">
+            <legend>
+                We provide Far- Flung and extremely comprehensive counselling packages for the following
+            </legend>
+            <!-- downarrow image -->
+            <br> <br>
+            <div class="d-flex justify-content-center">
+                <img src="{% static 'images/down-chevron.png' %}" width="100px" alt="">
+            </div> <br><br>
+            <!-- downarrow image -->
+            <!-- rows -->
+            <div class="row row-cols-1 row-cols-md-3 g-4" id="custom-cards">
+                <div class="col">
+                    <div class="card">
+                        <!-- <img id="card-imgs" src="{% static 'images/united-states.png' %}" class="card-img-top" alt="..."> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Bachelors (Undergrad) in U.S.A. & Canada.</h5>
+                            <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <!-- <img src="..." class="card-img-top" alt="..."> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Bachelors Abroad(All Other Countries).</h5>
+                            <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <!-- <img src="..." class="card-img-top" alt="..."> -->
+                        <div class="card-body">
+                            <h5 class="card-title">M.B.B.S Abroad </h5><br>
+                            <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <!-- <img src="..." class="card-img-top" alt="..."> -->
+                        <div class="card-body">
+                            <h5 class="card-title">M.D in U.S.A</h5>
+                            <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <!-- <img src="..." class="card-img-top" alt="..."> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Masters Abroad.</h5>
+                            <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <!-- <img src="..." class="card-img-top" alt="..."> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Paramedical Courses Abroad.</h5>
+                            <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- rows end -->
+        </div>
+        <!-- div6 end -->
+
+        <!-- div7 -->
+        <br><br>
+        <div class="container" id="div7">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img id="div7-img" src="{% static 'images/admissions2.jpg' %}" width="600px" alt="">
+                </div>
+                <div class="col-sm-6">
+                    <p>
+                        <span>Most colleges provide admission opportunity</span><br><br> To international students without any prejudice. While make admission decisions, some may consider Early admission for those who have not yet completed their 3rd
+                        year bachelor’s degree. <br><br> Some colleges/universities offer an Early Decision admission, for which the admitted students need to commit to enroll at the college. Normally, such colleges take ‘Early action’ in notifying the
+                        students of ‘Early Decision’ based on which the students have to accept the admission offer and make a deposit.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- div7 end -->
+
+        <!-- div8 -->
+        <br><br>
+        <div class="container table-responsive" id="div8">
+            <table class="table">
+                <thead>
+                    <tr class="table-dark">
+                        <th scope="col">#</th>
+                        <th scope="col">International Admission Requirements</th>
+                        <th scope="col">MSCIA</th>
+                        <th scope="col">Graduate Level Certificate Programs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class='table-info'>
+                        <th scope="row">1</th>
+                        <td>Application form</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr class='table-info'>
+                        <th scope="row">2</th>
+                        <td>Previous Degree</td>
+                        <td>Bachelor’s Degree*</td>
+                        <td>Bachelor’s Degree*</td>
+                    </tr>
+                    <tr class='table-info'>
+                        <th scope="row">3</th>
+                        <td>Official Transcripts</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr class='table-info'>
+                        <th scope="row">4</th>
+                        <td>Updated Resumé / CV</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr class='table-info'>
+                        <th scope="row">5</th>
+                        <td>Statement of Purpose</td>
+                        <td>Recommendation</td>
+                        <td>Recommendation</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- div8 end -->
+
+        <!-- div9 -->
+        <div class="container" id="div3">
+            <div class="row">
+                <div id="div9-para" class="col-sm-6">
+                    <p>
+                        <span>Connect with India’s best study abroad experts.</span> <br>Every year students travel across countries, continents and seas to embark on a life changing educational experience. <br>
+                        <br> They will face unique challenges but the benefits are enormous.
+                        <br> If you choose to study abroad you will be guaranteed the experience of a different culture, lifestyle and climate. <br>
+                        <br> You will make new friends and possibly learn a new language. Overall the international awareness gained from your overseas experience is likely to enhance your long term career prospects.
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <img class="img-fluid" src="{% static 'images/abroad.jpg' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- div9 -->
+        <!-- div10 -->
+        <div class="container" id="div10">
+            <h1 class="d-flex justify-content-center">
+                Get in Touch with superlative overseas consultants
+            </h1>
+            <div class="row">
+                <div class="col-sm">
+                    <span> 
+                        <img id="map" height="55px" src="{% static 'images/location.png' %}" alt="" class="d-flex justify-content-center">
+                    </span> Our Location <br> <span id="map-text"> A1-51, Delhi Rd, Mansarover Colony, <br> Line Par, Moradabad, Uttar Pradesh 244001 </span>
+                </div>
+                <div class="col-sm">
+                    <span> 
+                        <img id="map" height="55px" src="{% static 'images/phone-call.png' %}" alt="" class="d-flex justify-content-center">
+                    </span> Let's Talk <br> <span id="map-text"> Mobile : +91 90684 31074  </span>
+                </div>
+                <div class="col-sm">
+                    <span> 
+                        <img id="map" height="55px" src="{% static 'images/mail.png' %}" alt="" class="d-flex justify-content-center">
+                    </span> Drop a Line <br> <span id="map-text">  info@superlativeoverseas.com </span>
+                </div>
+                <div class="col-sm">
+                    <span> 
+                        <img id="map" height="55px" src="{% static 'images/clock.png' %}" alt="" class="d-flex justify-content-center">
+                    </span> Working Hours <br> <span id="map-text"> 
+                        Mon - Fri: 10:00am - 07:00pm. <br> Sat: 10:00am - 5:30pm <br> </span>
+                </div>
+            </div>
+        </div>
+        <!-- div10 inner bottom border div -->
+        <div id="div10_btm">
+
+        </div>
+        <!-- div10 inner bottom border div end-->
+
+        <!-- div10 end -->
+        <!-- map -->
+        <br><br>
+        <div>
+            <div style="width: 100%"><iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=UGF-58,Parsvnath%20Plaza-1,A1-51,%20Delhi%20Road,%20Moradabad,U.P-244001+(superlative%20overseas%20consultants)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                    width="100%" height="600" frameborder="0"><a href="https://www.gps.ie/wearable-gps/">adventure gps</a></iframe></div>
+        </div>
+        <!-- map end -->
+        <br><br><br>
+        <!-- footer -->
+        <div id="ftr">
+            <p>
+                © Copyright superlative overseas consultants. All Rights Reserved
+            </p>
+        </div>
+        <!-- footer end -->
+
+
+        <br> {% endblock %}
+
+
+</body>
+
+</html>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html> {% extends 'overseasApp/base.html' %} {% load crispy_forms_tags %} {% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry</title>
+</head>
+
+<body>
+    {% block content %}
+
+    <div class="container table-responsive" id="enquired-data">
+        {% if invoice_data %}
+        <legend>
+            <h2 class="badge rounded-pill bg-info text-dark"> Total Records :{{ datacount }}</h2>
+            <a href="{% url 'admin_control' %}">
+                <h2 class="badge rounded-pill bg-info text-dark"> Go To Admin Console</h2>
+            </a>
+        </legend>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Order_No</th>
+                    <th scope="col">Student Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Contact</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Total Payment</th>
+                    <th scope="col">Advance Payment</th>
+                    <th scope="col">Due Amount</th>
+                    <!-- <th scope="col">Send Invoice</th> -->
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in invoice_data %}
+                <tr>
+                    <th scope="row"> <img id="man-img" src="{% static 'images/man.png' %}" alt=""></th>
+                    <td>
+                        <a style="color:black;background:rgb(43, 249, 249);text-decoration: none; font-weight:bold" href="DetailInvoice/{{ data.id }}"> {{ data.Order_No}} </a>
+                    </td>
+                    <td>{{ data.Student_name }}</td>
+                    <td>{{ data.Address }}</td>
+                    <td>{{ data.Phone }}</td>
+                    <td>{{ data.Email }}</td>
+                    <td>{{ data.Date }}</td>
+                    <td>{{ data.Description }}</td>
+                    <td style="background:rgb(43, 160, 100); font-weight:bold">₹{{ data.Total_Payment }}</td>
+                    <td style="background:rgb(226, 222, 2); font-weight:bold">₹{{ data.Advance_Payment }}</td>
+                    <td style="background:rgb(241, 59, 59); font-weight:bold">₹{{ data.Due_Payment }} </td>
+                    <!-- <td style="background:rgb(10, 62, 92); font-weight:bold">
+                        <a style="color:rgb(255, 255, 255);background:rgb(12, 12, 12);text-decoration: none; font-weight:bold" href="SendInvoice/{{ data.id }}"> {{ data.Order_No}} </a>
+                    </td> -->
+
+                </tr>
+                {% endfor %}
+                <br>{% else %}
+                <h1>No data Found</h1> {% endif%}
+
+            </tbody>
+        </table>
+    </div>
+    {% endblock %}
+
+
+</body>
+
+
+</html>

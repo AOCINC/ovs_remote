@@ -1,0 +1,2 @@
+1.student enquired form and store data
+2. student related files like passport,certification etc.. to store.

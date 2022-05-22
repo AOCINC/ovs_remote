@@ -1,0 +1,52 @@
+<!DOCTYPE html> {% extends 'overseasApp/base.html' %} {% load crispy_forms_tags %} {% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry</title>
+</head>
+
+<body>
+    {% block content %}
+    <br><br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm d-flex justify-content-center" id="admin-box">
+                <a href="{% url 'enquired_data' %}">
+                    <img src="{% static 'images/data-collection.png' %}" width="40px" alt=""> &nbsp;enquiry data
+                </a>
+            </div>
+            <div class="col-sm d-flex justify-content-center" id="admin-box">
+                <a href="{% url 'students_data' %}">
+                    <img src="{% static 'images/graduated.png' %}" width="40px" alt=""> &nbsp; student data
+                </a>
+            </div>
+            <div class="col-sm d-flex justify-content-center" id="admin-box">
+                <a href="{% url 'Invoices' %}">
+                    <img src="{% static 'images/bill.png' %}" width="40px" alt=""> &nbsp;Invoice
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm d-flex justify-content-center" id="admin-box">
+                <a href="{% url 'get_student_info' %}">
+                    <img src="{% static 'images/bill.png' %}" width="40px" alt=""> &nbsp;Get Student Info
+                </a>
+            </div>
+            <div class="col-sm d-flex justify-content-center" id="admin-box">
+                <a href="{% url 'New-Invoice' %}">
+                    <img src="{% static 'images/bill.png' %}" width="40px" alt=""> &nbsp;Create Invoice
+                </a>
+            </div>
+
+        </div>
+    </div> {% endblock %}
+
+
+</body>
+
+
+</html>

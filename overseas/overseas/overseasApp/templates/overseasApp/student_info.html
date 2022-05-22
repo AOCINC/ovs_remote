@@ -1,0 +1,93 @@
+<!DOCTYPE html> {% extends 'overseasApp/base.html' %} {% load crispy_forms_tags %} {% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry</title>
+</head>
+
+<body>
+    {% block content %}
+    <br><br><br><br><br>
+    <div class='container d-flex justify-content-center'>
+        <div>
+            {% if messages %} {% for message in messages %}
+            <div class="container">
+                <strong class="alert alert-info">{{ message }}</strong>
+                <a href="{% url 'home' %}">
+                    <button class='btn btn-primary'>
+                        Browse More
+                    </button>
+                </a>
+            </div>
+            {% endfor %} {% endif %}
+        </div>
+    </div>
+
+    <div id='student-info' class="container d-flex justify-content-center">
+        <div class="col-8 col-md-6">
+            <form class="row g-3" method="POST">
+                {% csrf_token %}
+                <h1>Get Student Info </h1>
+                <h5></h5>
+                <!-- <br> -->
+                <small class="fw-bold">The student inforamtion,You can Track them with this Reference!</small>
+                <br><br>
+                <div class="col-md-6" id='studentinfo-fields'>
+                    {{ form.Name | as_crispy_field }}
+                </div>
+                <div class="col-md-6" id='studentinfo-fields'>
+                    {{ form.Email | as_crispy_field }}
+                </div>
+                <div class="col-md-6" id='studentinfo-fields'>
+                    {{ form.Phone | as_crispy_field }}
+                </div>
+                <div class="col-md-6" id='studentinfo-fields'>
+                    {{ form.Location | as_crispy_field }}
+                </div>
+                <div class="col-md-6" id='studentinfo-fields'>
+                    {{ form.Country_Looking_For | as_crispy_field }}
+                </div>
+                <div class="col-md-6" id='studentinfo-fields'>
+                    {{ form.Ielts_score | as_crispy_field }}
+                </div>
+                <div class="col-md-6" id='studentinfo-fields'>
+                    {{ form.Which_Degree_Pursue | as_crispy_field }}
+                </div>
+                <div class="col-md-6" id='studentinfo-fields'>
+                    {{ form.Planning_Apply_In_Year | as_crispy_field }}
+                </div>
+                <div class="col-md-6" id='studentinfo-fields'>
+                    {{ form.Whats_highest_Education | as_crispy_field }}
+                </div>
+                <div class="col-md-6" id='studentinfo-fields'>
+                    {{ form.Expected_Or_Gained_Percentage | as_crispy_field }}
+                </div>
+                <div class="col-md-6" id='studentinfo-fields'>
+                    {{ form.Year_Of_Gruduation | as_crispy_field }}
+                </div>
+                <div class="col-md-6" id='studentinfo-fields'>
+                    {{ form.Status_Of_IELTS_TOEFL_Exam | as_crispy_field }}
+                </div>
+                <div class="col-6">
+                    <br>
+                    <button id='studentinfo-btn' type="submit" class="btn btn">Save Student Info</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <br><br> {% endblock %}
+
+
+</body>
+
+
+
+
+</html>
+
+</html>

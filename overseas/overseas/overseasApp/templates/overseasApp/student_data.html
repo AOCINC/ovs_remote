@@ -1,0 +1,73 @@
+<!DOCTYPE html> {% extends 'overseasApp/base.html' %} {% load crispy_forms_tags %} {% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry</title>
+</head>
+
+<body>
+    {% block content %}
+
+    <div class="container table-responsive" id="enquired-data">
+        {% if students %}
+        <legend>
+            <h2 class="badge rounded-pill bg-info text-dark"> Total Records :{{ datacount }}</h2>
+            <a href="{% url 'admin_control' %}">
+                <h2 class="badge rounded-pill bg-info text-dark"> Go To Admin Console</h2>
+            </a>
+        </legend>
+
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Country</th>
+                    <th scope="col">Ielts Score</th>
+                    <th scope="col">Looking Which Degree?</th>
+                    <th scope="col">Planning</th>
+                    <th scope="col">Education</th>
+                    <th scope="col">Percentage</th>
+                    <th scope="col">Grad Year</th>
+                    <th scope="col">Status Of IELTS/TOEFL</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in students %}
+                <tr>
+                    <th scope="row"> <img id="man-img" src="{% static 'images/man.png' %}" alt=""></th>
+                    <td>{{ data.Name}}</td>
+                    <td>{{ data.Email}}</td>
+                    <td>{{ data.Phone }}</td>
+                    <td>{{ data.Location }}</td>
+                    <td>{{ data.Country_Looking_For }}</td>
+                    <td>{{ data.Ielts_score }}</td>
+                    <td>{{ data.Which_Degree_Pursue }}</td>
+                    <td>{{ data.Planning_Apply_In_Year }}</td>
+                    <td>{{ data.Whats_highest_Education }}</td>
+                    <td>{{ data.Expected_Or_Gained_Percentage }} %</td>
+                    <td>{{ data.Year_Of_Gruduation }}</td>
+                    <td>{{ data.Status_Of_IELTS_TOEFL_Exam }}</td>
+                </tr>
+                {% endfor %}
+                <br>{% else %}
+                <h1>No data Found</h1> {% endif%}
+
+            </tbody>
+        </table>
+    </div>
+    {% endblock %}
+
+
+</body>
+
+
+</html>

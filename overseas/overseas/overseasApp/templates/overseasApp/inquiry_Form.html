@@ -1,0 +1,66 @@
+<!DOCTYPE html> {% extends 'overseasApp/base.html' %} {% load crispy_forms_tags %} {% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry</title>
+</head>
+
+<body>
+    {% block content %}
+    <br><br><br><br><br>
+    <div class='container d-flex justify-content-center'>
+        <div>
+            {% if messages %} {% for message in messages %}
+            <div class="container">
+                <strong class="alert alert-info">{{ message }}</strong>
+                <a href="{% url 'home' %}">
+                    <button class='btn btn-primary'>
+                        Browse More
+                    </button>
+                </a>
+            </div>
+            {% endfor %} {% endif %}
+        </div>
+    </div>
+
+    <div id='whole-div' class='container d-flex justify-content-center'>
+
+        <div class='col-8 col-md-4'>
+            <h1>Get An Enquiry </h1>
+            <h5></h5>
+            <!-- <br> -->
+            <small class="fw-bold">We Will Call You Soon!</small>
+            <br><br>
+            <form method="POST">
+                {% csrf_token %}
+                <div class='col-4' id='enquiry-fields'>
+                    {{ form.Name | as_crispy_field }}
+                </div>
+
+                <div class='col-4' id='enquiry-fields'>
+                    {{ form.Email | as_crispy_field }}
+                </div>
+
+                <div class='col-4' id='enquiry-fields'>
+                    {{ form.Phone | as_crispy_field }}
+                </div>
+
+                <div class='col-4' id='enquiry-fields'>
+                    {{ form.Location | as_crispy_field }}
+                </div>
+                <br>
+                <button type="submit" id="enq-btn" class="btn btn">Submit</button>
+            </form>
+        </div>
+    </div> <br><br> {% endblock %}
+
+
+</body>
+
+</html>
+
+</html>

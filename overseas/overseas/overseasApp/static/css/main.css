@@ -1,0 +1,617 @@
+#spce {
+    /* margin-top: 5px */
+}
+
+.container-fluid a {}
+
+.navbar-brand img {
+    /* margin-top: 50px; */
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .navbar-brand img {
+        width: 110px;
+    }
+}
+
+#navbar_custome {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 2px 3px -2px rgba(0, 0, 0, .7);
+    height: 85px;
+    /* margin-top: px; */
+}
+
+.navbar-toggler-icon {
+    /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); */
+    background-image: url("/static/images/menu.png");
+}
+
+#brand-center {
+    box-shadow: 0 2px 3px -2px rgba(0, 0, 0, .7);
+    background: rgb(23, 59, 62);
+}
+
+#brand-center img {
+    margin-bottom: 10px;
+}
+
+#navbar_custome .container-fluid a {
+    text-decoration: none !important;
+    color: rgb(13, 180, 231);
+    font-family: Montserrat, arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #navbar_custome .container-fluid a {
+        font-size: 15px;
+    }
+}
+
+#navbar_custome .container-fluid a:hover {
+    color: rgb(228, 115, 10);
+}
+
+#offcanvasNavbarLabel {
+    color: rgb(6, 79, 83);
+    font-family: Montserrat, arial, sans-serif;
+}
+
+
+/* carousel  */
+
+#banner-vid {
+    /* background-image: url("/static/images/video.mp4"); */
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    margin-top: 50px
+}
+
+.overlay {
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.overlay h2 {
+    background: rgb(255, 253, 253) none repeat scroll 0 0;
+    color: rgb(20, 19, 19);
+    font-weight: 600;
+    margin: 2rem 3rem 0;
+    mix-blend-mode: overlay;
+    padding: 5px 15px;
+    text-align: center;
+}
+
+@media screen
+/* and (min-width: 400px) */
+
+and (min-device-width: 320px) and (max-device-width: 480px) {
+    video {
+        background-color: rgb(122, 235, 122);
+        height: 250px;
+        margin-top: 80px;
+    }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .overlay h2 {
+        background: rgb(255, 253, 253) none repeat scroll 0 0;
+        color: rgb(20, 19, 19);
+        margin-bottom: 420px;
+    }
+}
+
+
+/* carousel */
+
+
+/* div2 */
+
+#div2 {
+    background: #0f485d;
+    color: #fff;
+    padding: 50px;
+    font-family: Montserrat, arial, sans-serif;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #div2 {
+        background-color: #0f485d;
+        background-image: linear-gradient(0deg, #0f485d 0%, #0f485d 100%);
+        color: #fff;
+        margin-top: -460px;
+        font-family: Montserrat, arial, sans-serif;
+        text-align: center;
+    }
+}
+
+
+/* div2 end */
+
+
+/* div3 */
+
+#div3 {
+    margin-top: 60px;
+}
+
+#div3-para {
+    margin-top: 20px;
+}
+
+#div3-para p {
+    /* box-shadow: 0 0 0.25em 0.25em rgba(0, 0, 0, 0.25); */
+    font-family: Montserrat, arial, sans-serif;
+    padding: 50px;
+    text-align: left;
+    font-size: 45px;
+    font-weight: bold;
+    color: rgb(13, 13, 13);
+}
+
+#div3 img {
+    /* border-radius: 50%; */
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #div3-para p {
+        font-family: Montserrat, arial, sans-serif;
+        padding: 50px;
+        text-align: left;
+        font-size: 40px;
+        font-weight: bold;
+        margin-top: -20%;
+    }
+}
+
+#div3-cap {
+    margin-top: -6%;
+    font-weight: bold;
+    color: rgb(12, 12, 12);
+}
+
+#div3-cap .col-sm {
+    margin-left: 8%;
+    font-size: 20px;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #div3-cap {
+        font-family: Montserrat, arial, sans-serif;
+        margin-top: -5%;
+    }
+}
+
+#counsel-btn {
+    background-color: #3f39e9;
+    color: #fff;
+    margin-top: 50px;
+    font-family: Montserrat, arial, sans-serif;
+}
+
+#counsel-btn a {
+    color: #fff;
+    text-decoration: none
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #counsel-btn {
+        font-family: Montserrat, arial, sans-serif;
+        margin-top: 5%;
+        margin-bottom: 15%;
+        font-family: Montserrat, arial, sans-serif;
+    }
+}
+
+
+/* div3 end */
+
+
+/* to prevent scrolloing in small devices */
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+/* to prevent scrolling in small devices */
+
+
+/* Enquiry  */
+
+#whole-div h1 {
+    color: rgb(70, 70, 251);
+}
+
+#whole-div h5 {
+    border-bottom: 5px solid rgb(70, 70, 251);
+    width: 280px;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #whole-div h5 {
+        width: 200px;
+    }
+}
+
+#enquiry-fields {
+    width: 450px;
+    color: rgb(101, 101, 103);
+    font-size: 25px;
+    font-family: Montserrat, arial, sans-serif;
+    box-shadow: 0 2px 3px -2px rgba(0, 0, 0, .7);
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #enquiry-fields {
+        font-family: Montserrat, arial, sans-serif;
+        width: 300px;
+        margin-left: -12%;
+    }
+}
+
+#enq-btn {
+    width: 450px;
+    background: #3f39e9;
+    color: #fff;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #enq-btn {
+        font-family: Montserrat, arial, sans-serif;
+        margin-left: -12%;
+        background: #3f39e9;
+        color: #fff;
+        width: 300px;
+    }
+}
+
+
+/* Enquiry end */
+
+
+/* div4 */
+
+.div-bg {
+    background: rgb(239, 237, 237);
+    padding: 10%;
+    margin-top: 5%;
+}
+
+#div4 {
+    background: #e6e6e6;
+    padding: 10%;
+    /* margin-top: 5%; */
+    box-shadow: 0 2px 20px -2px rgba(0, 0, 0, .7);
+}
+
+#div4-h2 {
+    /* font-size: 40px; */
+    margin-top: -5%;
+    color: #0c0c0c;
+    font-family: Montserrat, arial, sans-serif;
+    font-size: 20px;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #div4-h2 {
+        font-family: Montserrat, arial, sans-serif;
+        color: #080808;
+        margin-top: 15%;
+    }
+}
+
+#div4-box .col-sm {
+    color: #080808;
+}
+
+.card-body p {
+    font-family: Montserrat, arial, sans-serif;
+    color: rgb(99, 98, 98);
+}
+
+
+/* div4 end */
+
+
+/* div5  */
+
+#div5 {
+    margin-top: 5%;
+}
+
+#div5-1 p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 8%;
+    margin-left: 20px;
+}
+
+#div5-1 p span {
+    border-bottom: 5px solid #3f39e9;
+}
+
+#div5-2 {
+    font-size: 20px;
+    color: rgb(103, 102, 102);
+    /* margin-left: 20px; */
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #div5-2 {
+        margin-left: 20px;
+    }
+}
+
+
+/* div5 end */
+
+
+/* div6 */
+
+#div6 {
+    /* margin-top: 5%; */
+    /* padding: 5%; */
+}
+
+#div6 legend {
+    padding: 5%;
+    background-color: rgb(249, 247, 247);
+    font-family: Montserrat, arial, sans-serif;
+    box-shadow: 0 2px 23px -2px rgba(0, 0, 0, .7);
+    margin-top: 5%;
+    font-weight: bold;
+}
+
+#div6 #custom-cards {
+    color: rgb(96, 94, 94);
+    background-image: url("/static/images/world.jpg");
+    padding: 5%;
+}
+
+
+/* div6 end */
+
+
+/* div7  */
+
+#div7 {
+    margin-top: 4%;
+    margin-bottom: 5%;
+}
+
+#div7-img {
+    border-radius: 10px;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+}
+
+#div7 .row .col-sm-6 p {
+    color: rgb(101, 100, 100);
+    font-family: Montserrat, arial, sans-serif;
+    font-size: 18px;
+    margin-top: 12%;
+}
+
+#div7 .row .col-sm-6 p span {
+    font-size: 30px;
+    border-bottom: 5px solid #3f39e9;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #div7-img {
+        width: 350px;
+    }
+}
+
+
+/* div7 end */
+
+
+/* div8 */
+
+#div8 {
+    background-image: url("/static/images/bg-img.jpg");
+    padding: 5%;
+}
+
+
+/* div8 */
+
+
+/* div9 */
+
+#div_9 {
+    background-image: url("/static/images/abroad.jpg");
+    padding: 5%;
+}
+
+#div9-para p {
+    /* box-shadow: 0 0 0.25em 0.25em rgba(0, 0, 0, 0.25); */
+    font-family: Montserrat, arial, sans-serif;
+    padding: 50px;
+    text-align: left;
+    font-size: 18px;
+    color: rgb(86, 86, 86);
+}
+
+#div9-para p span {
+    background: rgb(86, 86, 249);
+    padding: 2px;
+    color: rgb(254, 252, 252);
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Montserrat, arial, sans-serif;
+}
+
+
+/* div9 end */
+
+
+/* div10 */
+
+#div10 {
+    color: rgb(255, 255, 255);
+    margin-top: 5%;
+    /* background: rgb(107, 106, 106); */
+    font-family: Montserrat, arial, sans-serif;
+}
+
+#div10 h1 {
+    background: black;
+    padding: 4%;
+}
+
+#div10 .row {
+    padding: 5%;
+    margin-left: 2%;
+    font-weight: bold;
+    font-family: Montserrat, arial, sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #div10 .row {
+        margin-left: 50px;
+        margin-bottom: 20px;
+    }
+}
+
+#map {
+    margin-left: 30px;
+}
+
+#map-text {
+    font-size: 10px;
+}
+
+#div10_btm {
+    border: 15px solid black;
+}
+
+
+/* div10 end */
+
+
+/* enquired data */
+
+#enquired-data {
+    margin-top: 7%;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #enquired-data {
+        margin-top: 30%;
+    }
+}
+
+#man-img {
+    width: 30px;
+}
+
+
+/* enquired data end */
+
+
+/* studetn info form */
+
+#student-info h1 {
+    color: #3f39e9
+}
+
+#student-info h5 {
+    border-bottom: 5px solid #3f39e9;
+    width: 295px;
+    margin-left: 2%;
+}
+
+#studentinfo-fields {
+    color: rgb(101, 101, 103);
+    font-family: Montserrat, arial, sans-serif;
+    padding: 2%;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #studentinfo-fields {
+        font-family: Montserrat, arial, sans-serif;
+        /* width: 450px; */
+    }
+}
+
+#studentinfo-btn {
+    background: #3f39e9;
+    color: #fff;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #studentinfo-btn {
+        font-family: Montserrat, arial, sans-serif;
+        width: 250px;
+        /* margin-left: -12%; */
+    }
+}
+
+
+/* studetn info forme end */
+
+
+/* admin console end */
+
+#admin-box {
+    background: rgb(255, 255, 255);
+    margin: 5%;
+    padding: 3%;
+    box-shadow: 0 0 0.25em 0.25em rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+}
+
+#admin-box a {
+    text-decoration: none;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #admin-box {
+        font-family: Montserrat, arial, sans-serif;
+        width: 350px;
+        /* margin-left: -12%; */
+    }
+}
+
+
+/* admin console end */
+
+
+/* footer */
+
+#ftr {
+    color: rgb(242, 241, 241);
+    background-color: black;
+    padding: 1%;
+    margin: 0;
+}
+
+
+/* footer end */
